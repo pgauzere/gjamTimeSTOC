@@ -7,9 +7,10 @@ library(gjam)
 # library(repmis)
 # library(maps)
 # library(DescTools)
-d <- "https://github.com/jimclarkatduke/gjam/blob/master/gjamTimeFunctions.R?raw=True"
-source_url(d)
+# d <- "https://github.com/jimclarkatduke/gjam/blob/master/gjamTimeFunctions.R?raw=True"
+# source_url(d)
 
+source("gjamTimeFunctions.R")
 load("data_for_model_run.Rdata")
 
 ################################################################################
