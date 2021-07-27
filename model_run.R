@@ -69,6 +69,7 @@ modelList <- list( typeNames = 'DA', ng = 100, burnin = 10,
 # RUN THE MODEL
 ################################################################################
 output <- gjam(formulaB, xdata, ydata, modelList)
+save(output, file='gjamOutput.RData')
 
 ################################################################################
 # PLOT OUTPUT
