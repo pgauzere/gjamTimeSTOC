@@ -4,8 +4,8 @@
 #OAR -n        test_gjamTimeSTOC
 #OAR --project teembio
 #OAR -l        /cpu=1,walltime=40:00:00
-#OAR -O        output_test_gjamTimeSTOC.stdout
-#OAR -E        error_test_gjamTimeSTOC.stderr
+#OAR -O        outputs/output_test_gjamTimeSTOC.stdout
+#OAR -E        outputs/error_test_gjamTimeSTOC.stderr
 
 #### define some bash options ###############################
 ## exit script as soon as a function return error
@@ -16,7 +16,7 @@ source /applis/site/guix-start.sh
 
 #### run R script ###########################################
 echo `date`
-R CMD BATCH model_run.R
+Rscript /bettik/gauzerep/gjamTimeSTOC/model_run.R
 /dev/stdout
 echo `date`
 
@@ -24,5 +24,4 @@ echo `date`
 exit $?
 
 ## oarsub -S ./OAR_run_model.oar
-
 
