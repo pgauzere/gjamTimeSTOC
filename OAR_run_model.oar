@@ -4,21 +4,21 @@
 #OAR -n        test_gjamTimeSTOC
 #OAR --project teembio
 #OAR -l        /cpu=1,walltime=40:00:00
-#OAR -O        outputs/output_test_gjamTimeSTOC.stdout
-#OAR -E        outputs/error_test_gjamTimeSTOC.stderr
+#OAR -O        outputs/out_gjamTimeSTOC.%jobid%.stdout
+#OAR -E        outputs/error_test_gjamTimeSTOC.%jobid%.stderr
 
 #### define some bash options ###############################
 ## exit script as soon as a function return error
 set –e
+cd /bettik/gauzerep/gjamTimeSTOC/
 
 #### load ciment environment and required softwares #########
 source /applis/site/guix-start.sh
 
 #### run R script ###########################################
-echo `date`
-Rscript /bettik/gauzerep/gjamTimeSTOC/model_run.R
-/dev/stdout
-echo `date`
+echo  'date'
+R CMD BATCH /bettik/gauzerep/gjamTimeSTOC/model_run.R
+echo 'date'
 
 ### quit the script ##########################################
 exit $?
