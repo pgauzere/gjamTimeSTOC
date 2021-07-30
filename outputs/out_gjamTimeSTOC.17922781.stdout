@@ -1,0 +1,10 @@
+Default profile on
+The following packages are currently installed in /home/gauzerep/.guix-profile/:
+r            	4.1.0	out	/gnu/store/dsyrgfjh6s9r532i5bd656xhdcl6axgx-r-4.1.0
+hello-gricad 	2.10 	out	/gnu/store/hl1vhx18skivyjyan1c9cwzfk9rs72gg-hello-gricad-2.10
+glibc-locales	2.31 	out	/gnu/store/wnw0nwlyg92vv33f5f65jj1rd3p4fi3c-glibc-locales-2.31
+r-devtools   	2.4.2	out	/gnu/store/bd9l9lda0971kd3wssgqdwsrq4sxr43h-r-devtools-2.4.2
+r-gjam       	2.3.9	out	/gnu/store/jnfayjkiwp9vdlw4rnb08fpdigyds30x-r-gjam-2.3.9
+r-tidyverse  	1.3.1	out	/gnu/store/513kbv0g8ixbp6ya61ggfjc5pqhnngpb-r-tidyverse-1.3.1
+date
+date
