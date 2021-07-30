@@ -24,7 +24,8 @@ load("data_for_model_run.Rdata")
 # that is affected by each covariate.
 
 # FORMULAE
-formulaB <- as.formula(~ temp + precip)
+formulaB <- as.formula(~ temp + precip + cover.Agricultural + 
+                         cover.Artificial + cover.Forest + cover.Open)
 
 # PRIORS
 priorB <- list(lo = list(temp =-0.05),
@@ -49,8 +50,8 @@ priorR  <- list(lo = list(temp = -0.05),
 # species j 
 
 alphaSign <- alpha
-alphaSign[alphaSign > -0.2 ] <- 0
-alphaSign[alphaSign <= -0.2 ] <- -1
+alphaSign[alphaSign > -0.3 ] <- 0
+alphaSign[alphaSign <= -0.3 ] <- -1
 
 ################################################################################
 # MODEL PARAMETERS
@@ -63,7 +64,7 @@ timeList  <- mergeList(tlist, priors)
 
 # Try setting the ng to 2000 and burnin to 500 for a longer run.
 effort <- list(columns = 1:ncol(edata), values = edata)
-modelList <- list( typeNames = 'DA', ng = 100, burnin = 10,  
+modelList <- list( typeNames = 'DA', ng = 20000, burnin = 5000,  
                    timeList = timeList, effort = effort ) 
 ################################################################################
 # RUN THE MODEL
